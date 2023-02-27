@@ -1,0 +1,18 @@
+:root {
+    --orange: #F68220;
+}
+a:hover{
+    text-decoration: none;
+}
+header ul a {
+    padding: 10px;
+    margin-left: 27px;
+    color: black;
+    font-size: 16px;
+}
+header ul .active {
+    border-bottom: 1px solid var(--orange);
+}
+header{
+    padding: 28px 0;
+}
