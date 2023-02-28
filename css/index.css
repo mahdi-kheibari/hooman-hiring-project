@@ -7,7 +7,19 @@ a:hover {
 }
 
 @keyframes slide {
-    100% { right: 0; }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* start header section */
@@ -56,11 +68,123 @@ header {
     background-color: white;
     animation: slide 0.5s forwards;
 }
-.sidebar-items li{
-    padding:10px;
+
+.sidebar-items li {
+    padding: 10px;
     padding-right: 0;
 }
-.sidebar-items a{
+
+.sidebar-items a {
     padding-right: 0;
 }
+
 /* end header section */
+/* start slider section */
+.slider-container {
+    width: 100%;
+    position: relative;
+}
+
+.slider-Slides {
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    background-image: url("../assets/images/header_360.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width:576px) {
+    .slideshow-container {
+        min-height: 764px;
+    }
+
+    .slider-Slides {
+        background-image: url("../assets/images/header_576.png");
+    }
+}
+
+@media (min-width:992px) {
+    .slideshow-container {
+        min-height: 460px;
+    }
+
+    .slider-Slides {
+        background-image: url("../assets/images/header_992.png");
+    }
+}
+
+@media (min-width:1200px) {
+    .slideshow-container {
+        min-height: 460px;
+    }
+
+    .slider-Slides {
+        background-image: url("../assets/images/header_1200.png");
+    }
+}
+
+@media (min-width:1600px) {
+    .slideshow-container {
+        min-height: 460px;
+    }
+
+    .slider-Slides {
+        background-image: url("../assets/images/header_1600.png");
+    }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: auto;
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.paginations {
+    position: absolute;
+    width: 29px;
+    height: 40px;
+    bottom: 19.5px;
+    right: calc(50% - 29px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.paginations-item {
+    cursor: pointer;
+    height: 100%;
+    width: 3px;
+    background-color: white;
+    transition: background-color 0.6s ease;
+}
+
+.activeSlide, .paginations-item:hover {
+    background-color: var(--orange);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/* end slider section */
