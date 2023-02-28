@@ -13,8 +13,8 @@
 
 <body dir="rtl">
     <header>
-        <nav class="container d-flex justify-content-between align-items-baseline">
-            <ul class="list-unstyled d-flex">
+        <nav class="container-lg d-flex justify-content-between align-items-baseline">
+            <ul class="list-unstyled d-none d-lg-flex">
                 <li>
                     <a href="#" class="header-item active" onclick="setActive(0)">صفحه‌اصلی</a>
                 </li>
@@ -34,8 +34,39 @@
                     <a href="#" class="header-item" onclick="setActive(5)">تماس با ما</a>
                 </li>
             </ul>
+            <div class="menu d-lg-none">
+                <img src="./assets/images/bar.png" onclick="openSidebar()" alt="menu icon">
+                <div class="sidebar">
+                    <div class="sidebar-backdrop" onclick="closeSidebar()"></div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-close p-2 pl-4 text-danger text-left" onclick="closeSidebar()">
+                            X
+                        </div>
+                        <ul class="list-unstyled d-flex flex-column align-items-start">
+                            <li>
+                                <a href="#">صفحه‌اصلی</a>
+                            </li>
+                            <li>
+                                <a href="#">پروژه‌ها</a>
+                            </li>
+                            <li>
+                                <a href="#">محصولات</a>
+                            </li>
+                            <li>
+                                <a href="#">درباره‌ما</a>
+                            </li>
+                            <li>
+                                <a href="#">گواهینامه‌ها</a>
+                            </li>
+                            <li>
+                                <a href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="logo">
-                <img src="./logo.png" alt="logo">
+                <img src="./assets/images/logo.png" alt="logo">
             </div>
         </nav>
     </header>

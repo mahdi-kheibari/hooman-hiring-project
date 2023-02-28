@@ -1,18 +1,66 @@
 :root {
     --orange: #F68220;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
+
+@keyframes slide {
+    100% { right: 0; }
+}
+
+/* start header section */
 header ul a {
     padding: 10px;
     margin-left: 27px;
     color: black;
     font-size: 16px;
 }
+
 header ul .active {
     border-bottom: 1px solid var(--orange);
 }
-header{
+
+header {
     padding: 28px 0;
 }
+
+.sidebar {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 65%;
+    z-index: 2;
+}
+
+.sidebar-items {
+    width: 255px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -255px;
+    z-index: 3;
+    background-color: white;
+    animation: slide 0.5s forwards;
+}
+.sidebar-items li{
+    padding:10px;
+    padding-right: 0;
+}
+.sidebar-items a{
+    padding-right: 0;
+}
+/* end header section */
