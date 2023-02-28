@@ -1,9 +1,6 @@
 :root {
     --orange: #F68220;
-}
-
-a:hover {
-    text-decoration: none;
+    --light: #F7F7F7;
 }
 
 @keyframes slide {
@@ -20,6 +17,19 @@ a:hover {
     to {
         opacity: 1
     }
+}
+
+/* global */
+body {
+    text-align: right !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.section-light {
+    background-color: var(--light);
 }
 
 /* start header section */
@@ -88,49 +98,38 @@ header {
 .slider-Slides {
     width: 100%;
     height: 100%;
-    min-height: 540px;
-    background-image: url("../assets/images/header_360.png");
+    min-height: 460px;
+    background-image: url("../assets/images/header/header_1600.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media (min-width:576px) {
-    .slideshow-container {
+
+@media (max-width:1200px) {
+    .slider-Slides {
+        min-height: 460px;
+        background-image: url("../assets/images/header/header_1200.png");
+    }
+}
+
+@media (max-width:992px) {
+    .slider-Slides {
+        min-height: 460px;
+        background-image: url("../assets/images/header/header_992.png");
+    }
+}
+
+@media (max-width:576px) {
+    .slider-Slides {
         min-height: 764px;
-    }
-
-    .slider-Slides {
-        background-image: url("../assets/images/header_576.png");
+        background-image: url("../assets/images/header/header_576.png");
     }
 }
 
-@media (min-width:992px) {
-    .slideshow-container {
-        min-height: 460px;
-    }
-
+@media (max-width:360px) {
     .slider-Slides {
-        background-image: url("../assets/images/header_992.png");
-    }
-}
-
-@media (min-width:1200px) {
-    .slideshow-container {
-        min-height: 460px;
-    }
-
-    .slider-Slides {
-        background-image: url("../assets/images/header_1200.png");
-    }
-}
-
-@media (min-width:1600px) {
-    .slideshow-container {
-        min-height: 460px;
-    }
-
-    .slider-Slides {
-        background-image: url("../assets/images/header_1600.png");
+        min-height: 540px;
+        background-image: url("../assets/images/header/header_360.png");
     }
 }
 
@@ -188,3 +187,53 @@ header {
 }
 
 /* end slider section */
+/* start section three */
+.section-three_title {
+    margin-bottom: 6px;
+}
+
+.section-three_image {
+    width: 100%;
+    min-height: 282px;
+    background-image: url("../assets/images/architecture/architecture-1600.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-three_subtitle {
+    color: var(--orange);
+}
+
+.architecture {
+    margin-top: 30px;
+}
+
+@media (max-width:1200px) {
+    .section-three_image {
+        min-height: 225px;
+        background-image: url("../assets/images/architecture/architecture-1200.png");
+    }
+}
+
+@media (max-width:992px) {
+    .section-three_image {
+        min-height: 404px;
+        background-image: url("../assets/images/architecture/architecture-992.png");
+    }
+}
+
+@media (max-width:576px) {
+    .section-three_image {
+        min-height: 304px;
+        background-image: url("../assets/images/architecture/architecture-576.png");
+    }
+}
+
+@media (max-width:360px) {
+    .section-three_image {
+        min-height: 186px;
+        background-image: url("../assets/images/architecture/architecture-360.png");
+    }
+}
+
+/* end section three */
