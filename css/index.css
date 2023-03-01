@@ -1,6 +1,7 @@
 :root {
     --orange: #F68220;
     --light: #F7F7F7;
+    --black: #3B3B3B;
 }
 
 @keyframes slide {
@@ -30,6 +31,10 @@ a:hover {
 
 .section-light {
     background-color: var(--light);
+}
+
+.text-orange {
+    color: var(--orange);
 }
 
 /* start header section */
@@ -200,6 +205,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-clip: content-box;
 }
 
 .section-three_subtitle {
@@ -543,13 +549,39 @@ header {
     margin: 0 45px;
     color: var(--orange);
 }
+
 @media (max-width:576px) {
     .contactUs-btn {
         width: 158px;
         text-align: center;
     }
+
     .contactUs-btn-active {
         margin: 45px 0;
     }
 }
+
 /* end contact us section */
+/* start footer section */
+footer {
+    background-color: var(--black);
+    padding: 40px 4px 30px;
+    color: white;
+}
+
+footer a {
+    color: white !important;
+}
+
+.pipe-light {
+    color: white;
+    opacity: 15%;
+}
+
+.hr-light {
+    opacity: 15%;
+    background-color: white;
+    margin: 45px 0 35px;
+}
+
+/* end footer section */
